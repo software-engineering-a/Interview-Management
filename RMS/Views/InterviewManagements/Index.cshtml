@@ -10,57 +10,59 @@
     @Html.ActionLink("Create New", "Create", new { })
 </p>
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.UID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.interview_date)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.time)
-        </th>
-        <th>
-           
-            @Html.DisplayNameFor(model => model.status)
-        </th>
-        <th>Marks</th>
-        <th></th>
-    </tr>
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.interview_date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.time)
+            </th>
+            <th>
 
-@foreach (var item in Model) {
-    <tr>
+                @Html.DisplayNameFor(model => model.status)
+            </th>
+            <th>Marks</th>
+            <th></th>
+        </tr>
+    </thead><tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.interview_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.time)
+            </td>
+            <td>
+                @if (item.status == "Pending")
+                {
+                    <span class="btn-warning">@Html.DisplayFor(modelItem => item.status)</span>
+                }
+                @if (item.status == "Accepted")
+                {
+                    <span class="btn-success">@Html.DisplayFor(modelItem => item.status)</span>
+                }
+                @if (item.status == "Rejected")
+                {
+                    <span class="btn-danger">@Html.DisplayFor(modelItem => item.status)</span>
+                }
+
+            </td>
+            <td>@item.marks</td>
         <td>
-            @Html.DisplayFor(modelItem => item.UID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.interview_date)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.time)
-        </td>
-        <td>
-            @if (item.status=="Pending")
-            {
-                <span class="btn-warning">@Html.DisplayFor(modelItem => item.status)</span>
-            }
-            @if (item.status == "Accepted")
-            {
-                <span class="btn-success">@Html.DisplayFor(modelItem => item.status)</span>
-            }
-            @if (item.status == "Rejected")
-            {
-                <span class="btn-danger">@Html.DisplayFor(modelItem => item.status)</span>
-            }
-            
-        </td>
-        <td>@item.marks</td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
         </td>
     </tr>
-}
-
+    }
+</tbody>
 </table>

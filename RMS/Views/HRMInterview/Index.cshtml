@@ -7,24 +7,25 @@
 <h2>List of Interviews</h2>
 
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.UID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.interview_date)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.time)
-        </th>
-        <th>
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.interview_date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.time)
+            </th>
+            <th>
 
-            @Html.DisplayNameFor(model => model.status)
-        </th>
-        <th>Marks</th>
-        <th></th>
-    </tr>
-
+                @Html.DisplayNameFor(model => model.status)
+            </th>
+            <th>Marks</th>
+            <th></th>
+        </tr>
+    </thead><tbody>
     @foreach (var item in Model)
     {
         <tr>
@@ -62,6 +63,6 @@
                 
             </td>
         </tr>
-    }
+    }</tbody>
 
 </table>
