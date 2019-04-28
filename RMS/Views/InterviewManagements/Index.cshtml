@@ -24,6 +24,7 @@
            
             @Html.DisplayNameFor(model => model.status)
         </th>
+        <th>Marks</th>
         <th></th>
     </tr>
 
@@ -53,6 +54,7 @@
             }
             
         </td>
+        <td>@item.marks</td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
             @Html.ActionLink("Details", "Details", new { id=item.ID }) |
