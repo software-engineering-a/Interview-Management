@@ -1,0 +1,67 @@
+﻿@model IEnumerable<RMS.Models.InterviewManagement>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>List of Interviews</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.interview_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.time)
+        </th>
+        <th>
+
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th>Marks</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.interview_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.time)
+            </td>
+            <td>
+                @if (item.status == "Pending")
+                {
+                    <span class="btn-warning">@Html.DisplayFor(modelItem => item.status)</span>
+                }
+                @if (item.status == "Accepted")
+                {
+                    <span class="btn-success">@Html.DisplayFor(modelItem => item.status)</span>
+                }
+                @if (item.status == "Rejected")
+                {
+                    <span class="btn-danger">@Html.DisplayFor(modelItem => item.status)</span>
+                }
+               @if(item.status==null)
+                {
+                    <span class="btn-danger">Invalid Status</span>
+                }
+
+            </td>
+            <td>@item.marks</td>
+            <td>
+                @Html.ActionLink("Add Marks", "AddMarks", new { id = item.ID }) 
+                
+            </td>
+        </tr>
+    }
+
+</table>

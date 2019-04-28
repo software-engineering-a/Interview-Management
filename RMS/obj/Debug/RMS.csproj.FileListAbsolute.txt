@@ -69,3 +69,5 @@ c:\users\ali\documents\visual studio 2015\Projects\RMS\RMS\obj\Debug\RMS.dll
 c:\users\ali\documents\visual studio 2015\Projects\RMS\RMS\obj\Debug\RMS.pdb
 C:\Users\ALI\documents\visual studio 2015\Projects\RMS\RMS\obj\Debug\RMS.Migrations.initial.resources
 C:\Users\ALI\documents\visual studio 2015\Projects\RMS\RMS\obj\Debug\RMS.csproj.GenerateResource.Cache
+C:\Users\ALI\documents\visual studio 2015\Projects\RMS\RMS\obj\Debug\RMS.Migrations.marks_added.resources
+C:\Users\ALI\documents\visual studio 2015\Projects\RMS\RMS\obj\Debug\RMS.Migrations.required_added.resources

@@ -50,6 +50,7 @@ namespace RMS.Controllers
         {
             if (ModelState.IsValid)
             {
+                interviewManagement.status = "Pending";
                 db.interview_mangement.Add(interviewManagement);
                 db.SaveChanges();
                 return RedirectToAction("Index");

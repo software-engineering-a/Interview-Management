@@ -169,6 +169,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HRMInterviewController.cs" />
     <Compile Include="Controllers\InterviewManagementsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -177,6 +178,14 @@
     <Compile Include="Migrations\201904281603177_initial.cs" />
     <Compile Include="Migrations\201904281603177_initial.Designer.cs">
       <DependentUpon>201904281603177_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904281656549_marks_added.cs" />
+    <Compile Include="Migrations\201904281656549_marks_added.Designer.cs">
+      <DependentUpon>201904281656549_marks_added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904281701387_required_added.cs" />
+    <Compile Include="Migrations\201904281701387_required_added.Designer.cs">
+      <DependentUpon>201904281701387_required_added.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -247,6 +256,8 @@
     <Content Include="Views\InterviewManagements\Details.cshtml" />
     <Content Include="Views\InterviewManagements\Edit.cshtml" />
     <Content Include="Views\InterviewManagements\Index.cshtml" />
+    <Content Include="Views\HRMInterview\Index.cshtml" />
+    <Content Include="Views\HRMInterview\AddMarks.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -262,6 +273,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201904281603177_initial.resx">
       <DependentUpon>201904281603177_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904281656549_marks_added.resx">
+      <DependentUpon>201904281656549_marks_added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904281701387_required_added.resx">
+      <DependentUpon>201904281701387_required_added.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
